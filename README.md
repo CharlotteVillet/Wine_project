@@ -17,4 +17,8 @@ Your job is to put the trained model into production. Hopefully, the team provid
 Your mission is to put this model into production by building an API. To succeed you need to:
 
     provide a /predict endpoint,
-    provide a small documentation for the developer team at the index of your website.
+    provide a small documentation for the developer team at the index of your website
+    
+## Heroku app deploy
+
+https://flask-wine-api.herokuapp.com/
