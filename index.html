@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="centered">
+  <h1>Wine-o-meter API Documentation</h1>
+  <p>
+    Welcome to Wine-o-meter, the best place to test your wine
+  </p>
+  <div>
+    <h2>Endpoints</h2>
+    <blockquote>
+      Prediction, method post
+    </blockquote>
+    <div>
+      <p>
+        This endpoint allows you to make a prediction of your wine's quality with a score from 0 to 10 based on physicochemical samples.
+      </p>
+      <h3>
+        How to request this endpoint?
+      </h3>
+      <p>
+          The expected input is a JSON with an <code>input</code> key followed by an array of inputs. Each inputs is an
+          array of samples in the following order:
+        </p><ol>
+          <li>fixed acidity</li>
+          <li>volatile acidity</li>
+          <li>citric acid</li>
+          <li>residual sugar</li>
+          <li>chlorides</li>
+          <li>free sulfur dioxide</li>
+          <li>total sulfur dioxide</li>
+          <li>density</li>
+          <li>pH</li>
+          <li>sulphates</li>
+          <li>alcohol</li>
+        </ol>
+        <p></p>
+        <p>
+          JSON input example:
+          </p><pre>            <code>
+        {
+          "input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]
+        }
+            </code>
+          </pre>
+        <p></p>
+        <p></p>
+        <p>
+          Expected output:
+          </p><pre>            <code>
+        {
+          "prediction": [6, 6]
+        }
+            </code>
+          </pre>
+        <p><
+  </div>
+</div>
+{% endblock %}
